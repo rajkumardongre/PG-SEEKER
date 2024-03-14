@@ -14,7 +14,7 @@ const globalErrorHandler = require("./controllers/errorController.js");
 
 const app = express();
 
-app.use(cors({ origin: "*"}));
+app.use(cors());
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));

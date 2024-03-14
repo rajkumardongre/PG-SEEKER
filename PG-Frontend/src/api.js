@@ -3,6 +3,7 @@ const apiUrl = `https://pgseeker.onrender.com/api/v1`;
 // const apiUrl = `/api/v1`;
 
 export const allPgs = async (filters) => {
+  console.log(":::::::\n",filters, "\n:::::::::")
   try {
     const response = await fetch(`${apiUrl}/pg/search`, {
       method: "POST",
