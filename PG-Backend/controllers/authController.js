@@ -23,9 +23,9 @@ const createSendToken = (user, statusCode, req, res) => {
       expires: new Date(
         Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
       ),
+      domain: "localhost",
     };
     res.cookie("jwt", token, cookieOptions);
-    // domain: "localhost",
     // domain: "bachelor-sdam.netlify.app"
     // httpOnly: true, //  with "httpOnly :true" browser can not modify our cookie, it can just recieve it
 
