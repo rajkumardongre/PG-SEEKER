@@ -435,6 +435,13 @@ exports.searchPg = async (req, res, next) => {
       },
     });
   } catch (err) {
-    next(err);
+    // next(err);
+    res.status(200).json({
+      status: "fail",
+      results: 0,
+      data: {
+        error: err,
+      },
+    });
   }
 };
