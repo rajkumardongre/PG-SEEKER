@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // MIDDLEWARES
 // app.use(multerParse.none());
-app.use(cors());
+app.use(cors({ origin: "*"}));
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
