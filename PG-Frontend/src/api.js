@@ -1,6 +1,8 @@
+const apiUrl = "https://pg-seeker.onrender.com";
+
 export const allPgs = async (filters) => {
   try {
-    const response = await fetch("http://localhost:5000/api/v1/pg/search", {
+    const response = await fetch(`${apiUrl}/pg/search`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +25,7 @@ export const allPgs = async (filters) => {
 export const createPG = async (pgData) => {
   try {
     // console.log(pgData);
-    const response = await fetch("http://localhost:5000/api/v1/pg", {
+    const response = await fetch(`${apiUrl}/pg`, {
       method: "POST",
       // headers: {
       //   "Content-Type": "application/json",
@@ -45,7 +47,7 @@ export const createPG = async (pgData) => {
 
 export const login = async (email, password) => {
   try {
-    const response = await fetch("http://localhost:5000/api/v1/user/login", {
+    const response = await fetch(`${apiUrl}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +69,7 @@ export const login = async (email, password) => {
 
 export const logout = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/v1/user/logout", {
+    const response = await fetch(`${apiUrl}/user/logout`, {
       method: "Get",
       headers: {
         "Content-Type": "application/json",
@@ -89,7 +91,7 @@ export const logout = async () => {
 
 export const signup = async (name, email, password, passwordConfirm) => {
   try {
-    const response = await fetch("http://localhost:5000/api/v1/user/signup", {
+    const response = await fetch(`${apiUrl}/user/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +114,7 @@ export const checkAuthentication = async () => {
   // Make an API call to your backend to check for authentication
   try {
     const response = await fetch(
-      "http://localhost:5000/api/v1/user/isLoggedIn",
+      `${apiUrl}/user/isLoggedIn`,
       {
         method: "GET",
         credentials: "include",
@@ -142,7 +144,7 @@ export const setUser = (user) => {
 
 export const getPG = async (pgID) => {
   try {
-    const response = await fetch(`http://localhost:5000/api/v1/pg/${pgID}`, {
+    const response = await fetch(`${apiUrl}/pg/${pgID}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -163,7 +165,7 @@ export const getPG = async (pgID) => {
 export const getReviews = async (pgID) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/v1/pg/${pgID}/reviews`,
+      `${apiUrl}/pg/${pgID}/reviews`,
       {
         method: "GET",
         headers: {
@@ -185,7 +187,7 @@ export const getReviews = async (pgID) => {
 export const createReview = async (review, rating, pgID, user) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/v1/pg/${pgID}/reviews`,
+      `${apiUrl}/pg/${pgID}/reviews`,
       {
         method: "POST",
         headers: {
@@ -210,7 +212,7 @@ export const createReview = async (review, rating, pgID, user) => {
 export const getProfile = async (userID) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/v1/user/me/${userID}`,
+      `${apiUrl}/user/me/${userID}`,
       {
         method: "GET",
         headers: {
@@ -234,7 +236,7 @@ export const getProfile = async (userID) => {
 export const updateProfile = async (updates, userID) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/v1/user/UpdateMe/${userID}`,
+      `${apiUrl}/user/UpdateMe/${userID}`,
       {
         method: "PATCH",
         headers: {
@@ -264,7 +266,7 @@ export const updatePassword = async (
 ) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/v1/user/updatePassword/${userID}`,
+      `${apiUrl}/user/updatePassword/${userID}`,
       {
         method: "PATCH",
         headers: {
