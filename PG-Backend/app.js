@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // MIDDLEWARES
 // app.use(multerParse.none());
 
-app.use(cors());
 app.use(cookieParser());
+app.use(cors({origin: "https://bachelor-sdam.netlify.app"}));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
