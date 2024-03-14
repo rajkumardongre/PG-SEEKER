@@ -1,4 +1,6 @@
 const apiUrl = `${process.env.REACT_APP_SERVER_DOMAIN}/api/v1`;
+// const apiUrl = `https://pgseeker.onrender.com/api/v1`;
+// const apiUrl = `/api/v1`;
 
 export const allPgs = async (filters) => {
   try {
@@ -9,6 +11,9 @@ export const allPgs = async (filters) => {
       },
       body: JSON.stringify(filters),
     });
+    
+    const text = await response.text()
+    console.log("Text: ", text)
     console.log(response)
     const data = await response.json();
     return data;
