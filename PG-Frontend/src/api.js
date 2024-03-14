@@ -1,5 +1,5 @@
 // const apiUrl = `${process.env.REACT_APP_SERVER_DOMAIN}/api/v1`;
-const apiUrl = `https://pgseeker.onrender.com/api/v1`;
+const apiUrl = `https://pg-seeker.onrender.com/api/v1`;
 // const apiUrl = `/api/v1`;
 
 export const allPgs = async (filters) => {
