@@ -14,13 +14,14 @@ const globalErrorHandler = require("./controllers/errorController.js");
 
 const app = express();
 
+app.use(cors({ origin: "*"}));
+
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // MIDDLEWARES
 // app.use(multerParse.none());
-app.use(cors({ origin: "*"}));
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
