@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use(multerParse.none());
 
 app.use(cookieParser());
-app.use(cors({origin: "https://bachelor-sdam.netlify.app"}));
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

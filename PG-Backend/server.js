@@ -33,9 +33,9 @@ cloudinary.config({
   api_key: process.env.ClOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
-
-const server = app.listen(process.env.PORT, () => {
-  console.log("Server started on port 5000");
+const port = process.env.PORT || 5000;
+const server = app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
 
 // For handling errors outside express from asynchronous code
