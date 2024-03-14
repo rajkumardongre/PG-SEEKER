@@ -14,7 +14,6 @@ const globalErrorHandler = require("./controllers/errorController.js");
 
 const app = express();
 
-app.use(cors());
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -23,10 +22,11 @@ app.use(express.static(path.join(__dirname, "public")));
 // MIDDLEWARES
 // app.use(multerParse.none());
 
+app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use(express.json({ limit: "100kb" }));
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/review", reviewRouter);
 app.use("/api/v1/user", userRouter);
