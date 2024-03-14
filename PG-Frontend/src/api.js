@@ -13,7 +13,7 @@ export const allPgs = async (filters) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -37,7 +37,7 @@ export const createPG = async (pgData) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -59,7 +59,7 @@ export const login = async (email, password) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -81,7 +81,7 @@ export const logout = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -154,7 +154,7 @@ export const getPG = async (pgID) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -177,7 +177,7 @@ export const getReviews = async (pgID) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -201,7 +201,7 @@ export const createReview = async (review, rating, pgID, user) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -225,7 +225,7 @@ export const getProfile = async (userID) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -250,7 +250,7 @@ export const updateProfile = async (updates, userID) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
@@ -280,7 +280,7 @@ export const updatePassword = async (
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return {
       status: "requestFail",
       error: "Something Went Wrong.",
