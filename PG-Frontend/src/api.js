@@ -9,7 +9,7 @@ export const allPgs = async (filters) => {
       },
       body: JSON.stringify(filters),
     });
-
+    console.log(response)
     const data = await response.json();
     return data;
   } catch (error) {
