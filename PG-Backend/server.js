@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+dotenv.config()
 const cloudinary = require("cloudinary");
 
 // For handling errors outside express from synchronous code
@@ -40,6 +41,7 @@ const server = app.listen(process.env.PORT, () => {
 // For handling errors outside express from asynchronous code
 // aSynchronous code errors emits unhandledRejection event , so we can catch them using that
 process.on("unhandledRejection", (err) => {
+  console.log(err)
   console.log("Unhandled rejection!! Shutting down...");
   console.log(err.name, err.message);
   server.close(() => {
