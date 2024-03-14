@@ -20,12 +20,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // MIDDLEWARES
 // app.use(multerParse.none());
-const corsOptions = {
-  // origin: "http://localhost:3000",
-  origin: process.env.ORIGIN,
-  credentials: true,
-};
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
