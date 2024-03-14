@@ -7,9 +7,6 @@ export const allPgs = async (filters) => {
   try {
     const response = await fetch(`${apiUrl}/pg/search`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify(filters),
     });
     
