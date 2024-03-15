@@ -6,8 +6,11 @@
   padding: 50px;
   margin: 0px auto;
   box-shadow: 0 2px 4px #d6dfe9;
+  justify-content: center;
+  align-items: center;
+  display:flex;
 }
-
+/* This is  Monish Sr. Forking and PR For the first time with great intentions please forgive me if i make any mistakes, happy coding !  */
 .whole-page {
   max-width: 800px;
   height: 88vh;
