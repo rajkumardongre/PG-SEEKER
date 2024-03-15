@@ -18,6 +18,7 @@ import ContactUs from "./components/contact us/contactUs";
 import Services from "./components/Services/services";
 import ProtectedRoute from "./ProtectedRoute";
 import Profile from "./components/profile/Profile";
+import WorkersListingPage from "./components/Workers/WorkersListingPage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/workers" element={<WorkersListingPage />} />
           <Route
             path="/profile"
             element={<ProtectedRoute component={Profile} />}

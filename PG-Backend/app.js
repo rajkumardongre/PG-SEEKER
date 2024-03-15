@@ -10,6 +10,7 @@ const pug = require("pug");
 const pgRouter = require("./routes/pgrouter");
 const reviewRouter = require("./routes/reviewRouter");
 const userRouter = require("./routes/userRouter");
+const workerRouter = require("./routes/workerRouter.js");
 const globalErrorHandler = require("./controllers/errorController.js");
 
 const app = express();
@@ -33,6 +34,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/v1/pg", pgRouter);
 app.use("/api/v1/review", reviewRouter);
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/worker", workerRouter);
 
 app.use(globalErrorHandler);
 

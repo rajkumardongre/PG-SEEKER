@@ -57,6 +57,14 @@ const Navbar = () => {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <Link
+                className="ff_space fw_400 blk_clr fs_sm blue_hover_clr"
+                to="/workers"
+              >
+                Workers
+              </Link>
+            </li>
           </ul>
           <div className="d-flex">
             <Link

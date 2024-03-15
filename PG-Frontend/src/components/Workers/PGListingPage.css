@@ -1,0 +1,79 @@
+.filters-body {
+  width: 35vw;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input[type="radio"] {
+  width: 17px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Styling for dropdown lists */
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+select {
+  border-radius: 10%;
+  width: 250px;
+  height: 30px;
+}
+
+.select-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.select-option {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.select-option:hover {
+  background-color: #f2f2f2;
+}
+
+.error-container {
+  padding: 100px;
+}
+
+.no-pg-error {
+  font-size: 70px;
+  text-align: center;
+  font-weight: 600;
+  color: #8da9d7;
+  margin-top: 100px;
+}
+
+.home-link {
+  text-align: center;
+  color: #b3b0b0;
+  font-size: large;
+}
