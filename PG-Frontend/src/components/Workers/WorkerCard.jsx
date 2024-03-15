@@ -135,17 +135,18 @@ function copyTextToClipboard(text) {
                   </div> */}
                   <h5>
                     {pg.name}
-                    <p className="locality">
+                    <p className="locality" style={{fontSize: "1.5rem"}}>
                       {pg.skill}
                     </p>
                   </h5>
-                  <p className="description">
+                  <p className="description" style={{fontSize: "1.2rem"}}>
                     {pg.about > 110
                       ? pg.about.slice(0, 110) + "..."
                       : pg.about}
                   </p>
                   {/* <hr /> */}
-                  <StarRating rating={4} />
+                  {/* <StarRating rating={4} /> */}
+                  <p style={{fontSize: "1.3rem"}}><em> Experience:<b>{pg.experience}</b></em></p>
 
                   <div className="li"></div>
 
